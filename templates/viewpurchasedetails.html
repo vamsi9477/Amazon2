@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 align="center">View All Customer Details</h1>
+<form action="/viewpurchasedetails/" method="post">
+    <table align="center" border="2">
+        <tr>
+            <td>card name</td>
+            <td>money</td>
+            <td>customer address</td>
+            <td>customer contact number </td>
+            <td>bank name</td>
+            <td>card number</td>
+            <td>card type</td>
+            <td>cvv no</td>
+            <td>watch types</td>
+            <td>watch name</td>
+
+
+        </tr>
+        <td>{{ hello }}</td>
+         """
+        {% for x in key %}
+        <tr>
+
+          <td>{{ x.cardname }}</td>
+            <td>{{ x.Money }}</td>
+            <td>{{ x.customeradd }}</td>
+              <td>{{ x.customercno }}</td>
+              <td>{{ x.bankname  }}</td>
+            <td>{{ x.cardnumber }}</td>
+              <td>{{ x.cardtype  }}</td>
+              <td>{{ x.cvvno }}</td>
+            <td>{{ x.watchesname  }}</td>
+            <td>{{ x.watchestypes}}</td>
+        </tr>
+
+            {% endfor %}
+       """
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">payment processes</h1>
+<form  action="/proceed/" method="post">
+    {% csrf_token %}
+<table align="center" border="0" bgcolor="#f5f5dc">
+<tr>
+    <td>
+        <select name="WatchesTypes">
+            <option>Select</option>
+            <option>Fasttrack</option>
+            <option>Rolex</option>
+        </select>
+    </td>
+</tr>
+    <tr>
+    <td>
+        <select name="Watches Names">
+            <option>select</option>
+            <option>fastrack bikers analog</option>
+            <option>fastrack casucal</option>
+            <option>fastrack leather</option>
+            <option>fastrack-blue-leather-analog</option>
+            <option>rolex blue</option>
+            <option>rolex leather type</option>
+            <option>rolex silver</option>
+        </select>
+    </td>
+</tr>
+    <tr>
+    <td>
+        <select name="Money">
+            <option>select</option>
+            <option>200</option>
+            <option>300</option>
+            <option>500</option>
+            <option>1000</option>
+            <option>10000 </option>
+        </select>
+    </td>
+</tr>
+    <tr>
+    <td>
+        <input type="number" placeholder="Customer Contact number" required name="t1">
+    </td>
+    </tr>
+
+    <tr>
+    <td align="center">Customer address
+        <textarea name="t2"></textarea>
+    </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Customer Card Type">
+                <option>select</option>
+                <option>credit card</option>
+                <option>Debit card</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" name="Bank Name" value="Axis Bank">Axis Bank<br>
+            <input type="radio" name="Bank Name" value="Lakshmi Vilas Bank">Lakshmi Vilas Bank<br>
+            <input type="radio" name="Bank Name" value="HDFC Bank">HDFC Bank<br>
+            <input type="radio" name="Bank Name" value="ICICI Bank">ICICI Bank<br>
+            <input type="radio" name="Bank Name" value="Bank of baroda">Bank of baroda<br>
+            <input type="radio" name="Bank Name" value="Andhra Bank">Andhra Bank<br>
+            <input type="radio" name="Bank Name" value="IDBI Bank">IDBI Bank<br>
+            <input type="radio" name="Bank Name" value="SBI Bank">SBI Bank<br>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="number" placeholder="Card Holder Number" required name="t3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="Card Holder Name" required name="t4">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="number" placeholder="CVV Number"  min="3" name="t5" required >
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="submit" value="Pay">
+        </td>
+    </tr>
+
+<tr>
+    <td>{{ purchaseitem  }}</td>
+</tr>
+</table>
+</form>
+<br>
+<form action="/logout/" method="post">
+    {% csrf_token %}
+<table align="center" border="0">
+<tr>
+    <td>
+        <button type="submit" value="Logout">Logout</button>
+    </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

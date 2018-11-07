@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Product Details</h1>
+<table align="center" border="0">
+    <tr>
+        <td>
+            {% load staticfiles %}
+            <img src="{% static 'fastrack bikers analog.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:Fastrack bikers analog</span><br/>
+            <span>Product price:3000</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form> &nbsp;
+            <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+
+        </td>
+        <td>
+            {% load staticfiles %}
+            <img src="{% static 'fastrack casucal.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:Fastrack casucal</span><br/>
+            <span>Product price:2800</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>&nbsp;
+            <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+        <td>
+            {% load staticfiles %}
+            <img src="{% static 'fastrack leather.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:Fastrack leather</span><br/>
+            <span>Product price:2600</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>  &nbsp;
+          <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+      <td>
+            {% load staticfiles %}
+            <img src="{% static 'fastrack-blue-leather-analog.png' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:Fastrack blue-leather</span><br/>
+            <span>Product price:2800</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>  &nbsp;
+          <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+    <td>
+            {% load staticfiles %}
+            <img src="{% static 'rolex blue.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:Rolex Blue</span><br/>
+            <span>Product price:28000</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>  &nbsp;
+           <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+    <td>
+            {% load staticfiles %}
+            <img src="{% static 'rolex leather type.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:rolex leather</span><br/>
+            <span>Product price:38000</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>  &nbsp;
+            <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+    <td>
+            {% load staticfiles %}
+            <img src="{% static 'rolex silver.jpg' %}" width="100" height="100"><br/>
+            <span>Product Name:Watch</span><br/>
+            <span>Product brand:rolex silver</span><br/>
+            <span>Product price:40000</span>
+            <form action="/addcart/" method="post">
+                {% csrf_token %}
+            <input type="submit" value="Add to Cart">
+            </form>  &nbsp;
+        <form action="/proceed1/" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Proceed to pay">
+          </form>
+        </td>
+
+    </tr>
+</table>&nbsp;
+<table align="center" border="0">
+  <tr>
+      <td>
+      <a href="/proceed1/">Proceed to purchase the items</a>
+      </td> &nbsp;
+
+        <td>
+        <a href="/addcart/">To view ADD Cart Details</a>
+        </td>
+    </tr>
+    </table>
+</body>
+</html>
+
+
